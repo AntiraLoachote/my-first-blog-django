@@ -26,3 +26,7 @@ h1 {
 .content {
     padding-left: 30px;
 }
+
+.content h1 a {
+    color: black;
+}
