@@ -1,0 +1,28 @@
+h1 {
+    font-family: 'Lobster';
+}
+
+
+/* h1 a {
+    color: #FCA205;
+} */
+
+.header {
+    background-color: #FCA205;
+    color: white;
+    height: 100px;
+}
+
+.header h1 {
+    padding-top: 25px;
+    padding-left: 50px;
+    margin-top: 0;
+}
+
+.header h1 a {
+    color: white;
+}
+
+.content {
+    padding-left: 30px;
+}
