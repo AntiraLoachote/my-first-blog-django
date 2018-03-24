@@ -1,40 +1,10 @@
-{% load staticfiles %}
-<html>
-
-<head>
-    <title>Django Girls blog</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-</head>
-
-<body>
-    <div class="col-xs-12 col-md-12">
-        <!-- <div class="container"> -->
-        <div class="row ">
-            <div class="header">
-                <h1>
-                    <a href="https://tutorial.djangogirls.org/en/">Django Girls Blog</a>
-                </h1>
-            </div>
-        </div>
-
-        <!-- </div> -->
-
-        <div class="row content">
-            {% for post in posts %}
-            <div class="col-xs-12 col-md-10">
-                <h1>{{post.title}}</h1>
-                <p>published: {{post.published_date}}</p>
-                <p>{{ post.text|linebreaksbr}}</p>
-            </div>
-            {% endfor %}
-
-        </div>
-    </div>
+ {% extends 'blog/base.html' %} {% block content %} {% for post in posts %}
+<div class="row content">
+    <div class="col-xs-12 col-md-10">
+        <h1>{{post.title}}</h1>
+        <p>published: {{post.published_date}}</p>
+        <p>{{ post.text|linebreaksbr}}</p>
     </div>
 
-</body>
-
-</html>
+</div>
+{% endfor %} {% endblock %}
